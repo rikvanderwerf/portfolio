@@ -1,0 +1,15 @@
+version: '3'
+services:
+  portfolio-web:
+    container_name: portfolio-web
+    image: portfolio-web:dev
+    build:
+      context: .
+    ports:
+      - "9090:9090"
+    volumes:
+      - .:/portfolio-web
+      - /portfolio-web/node_modules/ # Makes sure local node_modules doesn't get mounted
+    tty: true
+    stdin_open: true
+    command: yarn start
