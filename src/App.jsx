@@ -5,6 +5,11 @@ import Home from './pages/Home';
 
 const theme = {
   cardbackground: '#fff',
+  backgroundcolor: '#F3F5F9',
+  maincolor: '#6C59FF',
+  titlecolor: '#4A4A4A',
+  textcolor: '#70706F',
+  maincolorshadow: 'rgb(108, 89, 255, 0.2)',
 };
 
 const GlobalStyle = createGlobalStyle`
@@ -16,6 +21,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0px;
     height: 100%;
     width: 100%;
+    background-color: ${(props) => props.theme.backgroundcolor}
   }
 
   body {
@@ -38,7 +44,7 @@ export default function App(props) {
       <ThemeProvider theme={theme}>
         <BrowserRouter>
           <Switch>
-            <Route exact path="/home" component={Home} />
+            <Route exact path="/" component={Home} />
           </Switch>
         </BrowserRouter>
         <GlobalStyle />
