@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch, } from 'react-router-dom';
+import { Home } from './pages/Home'
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
 const theme = {
@@ -8,6 +9,7 @@ const theme = {
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,500,600,700,700i&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Vollkorn:400,400i,600,600i,700&display=swap');
 
   html, body {
     margin: 0px;
@@ -36,6 +38,7 @@ export default function App(props) {
       <ThemeProvider theme={theme}>
         <BrowserRouter>
           <Switch>
+            <Route exact path='/home' component={Home} />
           </Switch>
         </BrowserRouter>
         <GlobalStyle />
