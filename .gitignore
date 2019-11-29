@@ -8,6 +8,7 @@
 /build
 
 # misc
+.cache/
 .DS_Store
 .env.local
 .env.development.local
@@ -21,3 +22,4 @@ yarn-error.log*
 # Parcel related files
 dist/
 .cache/
+/.cache
