@@ -54,10 +54,10 @@ const Icon = styled(FontAwesomeIcon)`
 `;
 
 function SearchBar(props) {
-  const children = { props };
+  const { children } = props;
   return (
     <SearchBarHolder>
-      <TextHolder>Rik van der Werf</TextHolder>
+      <TextHolder>{children}</TextHolder>
       <IconCard><IconHolder><Icon icon={faSearch} /></IconHolder></IconCard>
     </SearchBarHolder>
   );
