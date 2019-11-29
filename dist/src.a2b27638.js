@@ -39020,7 +39020,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n\n  display: grid;\n  grid-column-gap: 40px;\n  background-color: black;\n  align-items: center;\n  height: 1000px;\n  max-width: 1350px;\n  width: 80%;\n  padding: 100px 0px;\n  justify-self: center;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: grid;\n  background-color: black;\n  align-items: center;\n  margin: 0 auto;\n  height: 1000px;\n  max-width: 1350px;\n  width: 80%;\n  padding: 100px 0px;\n  justify-self: center;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -39045,11 +39045,6 @@ function (_React$Component) {
   }
 
   _createClass(Home, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      console.log("asda");
-    }
-  }, {
     key: "render",
     value: function render() {
       return _react.default.createElement(Content, null, "sdf");
@@ -39073,9 +39068,9 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
-var _Home = require("./pages/Home.jsx");
-
 var _styledComponents = require("styled-components");
+
+var _Home = _interopRequireDefault(require("./pages/Home"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -39092,7 +39087,7 @@ function _templateObject() {
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var theme = {
-  cardbackground: "#fff"
+  cardbackground: '#fff'
 };
 var GlobalStyle = (0, _styledComponents.createGlobalStyle)(_templateObject(), function (props) {
   return props.theme.textcolor;
@@ -39104,10 +39099,10 @@ function App(props) {
   }, _react.default.createElement(_reactRouterDom.BrowserRouter, null, _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
     exact: true,
     path: "/home",
-    component: _Home.Home
+    component: _Home.default
   }))), _react.default.createElement(GlobalStyle, null)));
 }
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./pages/Home.jsx":"src/pages/Home.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","./pages/Home":"src/pages/Home.jsx"}],"src/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -39147,7 +39142,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40075" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44737" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

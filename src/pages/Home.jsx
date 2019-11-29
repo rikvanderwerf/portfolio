@@ -3,11 +3,10 @@ import styled from 'styled-components';
 import media from '../util/media';
 
 const Content = styled.div`
-
   display: grid;
-  grid-column-gap: 40px;
   background-color: black;
   align-items: center;
+  margin: 0 auto;
   height: 1000px;
   max-width: 1350px;
   width: 80%;
@@ -16,13 +15,9 @@ const Content = styled.div`
 `;
 
 class Home extends React.Component {
-  componentDidMount() {
-    console.log("asda");
-  }
-
   render() {
     return (
-        <Content>sdf</Content>
+      <Content>sdf</Content>
     );
   }
 }

@@ -1,10 +1,10 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch, } from 'react-router-dom';
-import { Home } from './pages/Home.jsx'
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import Home from './pages/Home';
 
 const theme = {
-  cardbackground: "#fff"
+  cardbackground: '#fff',
 };
 
 const GlobalStyle = createGlobalStyle`
@@ -21,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: Open Sans, sans-serif;
     font-size: 16;
-    color: ${props => props.theme.textcolor};
+    color: ${(props) => props.theme.textcolor};
   }
 
   div {
@@ -38,11 +38,11 @@ export default function App(props) {
       <ThemeProvider theme={theme}>
         <BrowserRouter>
           <Switch>
-            <Route exact path='/home' component={Home} />
+            <Route exact path="/home" component={Home} />
           </Switch>
         </BrowserRouter>
         <GlobalStyle />
       </ThemeProvider>
     </div>
-   );
+  );
 }
