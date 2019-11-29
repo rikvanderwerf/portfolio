@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import Card from './Card';
 
 const propTypes = {
@@ -32,21 +32,25 @@ const TextHolder = styled.div`
   transform: translateY(-50%);
 `;
 
-const IconHolder = styled(Card)`
+const IconCard = styled(Card)`
   float: right;
   margin: 10px;
   height: 50px;
   width: 50px;
   right: 0;
+  postion: relative;
   background-color: ${(props) => props.theme.maincolor};
   drop-shadow: box-shadow: 0 10px 15px -3px ${(props) => props.theme.maincolorshadow};
 `;
 
+const IconHolder = styled.div`
+  margin: 0 auto;
+  width: 20px;
+`;
+
 const Icon = styled(FontAwesomeIcon)`
-  width: 100%;
-  height: 100%;
-  padding: 5px;
   color: white;
+  height: 100%;
 `;
 
 function SearchBar(props) {
@@ -54,7 +58,7 @@ function SearchBar(props) {
   return (
     <SearchBarHolder>
       <TextHolder>Rik van der Werf</TextHolder>
-      <IconHolder />
+      <IconCard><IconHolder><Icon icon={faSearch} /></IconHolder></IconCard>
     </SearchBarHolder>
   );
 }
@@ -63,6 +67,3 @@ SearchBar.defaultProps = defaultProps;
 SearchBar.propTypes = propTypes;
 
 export default SearchBar;
-
-
-// <Icon icon={faCoffee} />
