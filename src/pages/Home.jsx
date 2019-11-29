@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import media from '../util/media';
 
 const Content = styled.div`
+
   display: grid;
   grid-column-gap: 40px;
   background-color: black;

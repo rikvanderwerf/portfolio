@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch, } from 'react-router-dom';
-import { Home } from './pages/Home'
+import { Home } from './pages/Home.jsx'
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
 const theme = {

@@ -39020,7 +39020,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  display: grid;\n  grid-column-gap: 40px;\n  background-color: black;\n  align-items: center;\n  height: 1000px;\n  max-width: 1350px;\n  width: 80%;\n  padding: 100px 0px;\n  justify-self: center;\n"]);
+  var data = _taggedTemplateLiteral(["\n\n  display: grid;\n  grid-column-gap: 40px;\n  background-color: black;\n  align-items: center;\n  height: 1000px;\n  max-width: 1350px;\n  width: 80%;\n  padding: 100px 0px;\n  justify-self: center;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -39073,7 +39073,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
-var _Home = require("./pages/Home");
+var _Home = require("./pages/Home.jsx");
 
 var _styledComponents = require("styled-components");
 
@@ -39107,7 +39107,7 @@ function App(props) {
     component: _Home.Home
   }))), _react.default.createElement(GlobalStyle, null)));
 }
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./pages/Home":"src/pages/Home.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./pages/Home.jsx":"src/pages/Home.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
