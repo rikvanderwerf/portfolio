@@ -26,10 +26,8 @@ const TextHolder = styled.div`
   float: left;
   width: 80%;
   font-size: 30px;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  line-height: 70px;
+  vertical-align: middle;
 `;
 
 const IconCard = styled(Card)`
@@ -40,7 +38,7 @@ const IconCard = styled(Card)`
   right: 0;
   postion: relative;
   background-color: ${(props) => props.theme.maincolor};
-  drop-shadow: box-shadow: 0 10px 15px -3px ${(props) => props.theme.maincolorshadow};
+  box-shadow: 0 10px 15px -3px ${(props) => props.theme.maincolorshadow};
 `;
 
 const IconHolder = styled.div`
@@ -53,12 +51,20 @@ const Icon = styled(FontAwesomeIcon)`
   height: 100%;
 `;
 
+const SearchResult = styled.div`
+  font-size: 13px;
+  float: right;
+  text-align: right;
+  margin-top: 5px;
+`;
+
 function SearchBar(props) {
   const { children } = props;
   return (
     <SearchBarHolder>
       <TextHolder>{children}</TextHolder>
       <IconCard><IconHolder><Icon icon={faSearch} /></IconHolder></IconCard>
+      <SearchResult>1 search result found</SearchResult>
     </SearchBarHolder>
   );
 }

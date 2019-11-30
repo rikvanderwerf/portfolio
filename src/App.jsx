@@ -7,6 +7,7 @@ const theme = {
   cardbackground: '#fff',
   backgroundcolor: '#F3F5F9',
   maincolor: '#6C59FF',
+  maindarkcolor: '#513AFC',
   titlecolor: '#4A4A4A',
   textcolor: '#70706F',
   maincolorshadow: 'rgb(108, 89, 255, 0.2)',
@@ -21,12 +22,13 @@ const GlobalStyle = createGlobalStyle`
     padding: 0px;
     height: 100%;
     width: 100%;
+    font-weight: 600;
     background-color: ${(props) => props.theme.backgroundcolor}
   }
 
   body {
     font-family: Open Sans, sans-serif;
-    font-size: 16;
+    font-size: 18px;
     color: ${(props) => props.theme.textcolor};
   }
 
