@@ -25,7 +25,7 @@ const ContainerTitle = styled.div`
 `;
 
 const ImageHolder = styled.img`
-  width: 200px;
+  width: 180px;
   max-height: 150px;
   margin: 30px;
   vertical-align: middle;
