@@ -19,6 +19,11 @@ const ButtonHolder = styled(Card)`
   background-color: ${(props) => props.theme.maincolor};
   box-shadow: 1px 1px 15px 5px  ${(props) => props.theme.maincolorshadow};
   position: relative;
+  margin-top: 10px;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const TextHolder = styled.div`

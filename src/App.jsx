@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import Home from './pages/Home';
+import Work from './pages/Work';
 
 const theme = {
   cardbackground: '#fff',
@@ -49,6 +50,9 @@ export default function App(props) {
         <BrowserRouter>
           <Switch>
             <Route exact path="/" component={Home} />
+          </Switch>
+          <Switch>
+            <Route exact path="work/" component={Work} />
           </Switch>
         </BrowserRouter>
         <GlobalStyle />

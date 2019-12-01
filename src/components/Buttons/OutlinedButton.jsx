@@ -13,6 +13,12 @@ const OutlinedButton = styled.div`
   border-radius: 12px;
   font-size: 18px
   color: ${(props) => props.theme.maincolor};
+
+  &:hover {
+    cursor: pointer;
+    color: white;
+    background-color: ${(props) => props.theme.maincolor};
+  }
 `;
 
 export default OutlinedButton;

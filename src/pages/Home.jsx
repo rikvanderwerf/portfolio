@@ -9,6 +9,7 @@ import ExperienceContainer from '../components/experience/ExperienceContainer';
 import ExperienceItem from '../components/experience/ExperienceItem';
 import SkillsContainer from '../components/SkillsContainer';
 import Photo from '../images/rik.jpeg';
+import Link from '../components/Link';
 
 const OuterContainer = styled.div`
   max-width: 1350px;
@@ -90,7 +91,7 @@ function Home(props) {
               He is also interested in cyber security and loves to spend his spare time
               hacking CTF machines
             </p>
-            <OutlinedButton>See his work</OutlinedButton>
+            <Link href="/work"><OutlinedButton href="/work">See his work</OutlinedButton></Link>
           </DescriptionBox>
           <ProfilePictureHolder>
             <PhotoCard image={Photo} />
