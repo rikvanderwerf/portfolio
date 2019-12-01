@@ -14,6 +14,7 @@ const theme = {
   iconcolor: '#fff',
   textcolor: '#70706F',
   maincolorshadow: 'rgb(108, 89, 255, 0.2)',
+  backgroundsecondarycolor: '#3F3D56',
 };
 
 const GlobalStyle = createGlobalStyle`
@@ -52,7 +53,7 @@ export default function App(props) {
             <Route exact path="/" component={Home} />
           </Switch>
           <Switch>
-            <Route exact path="work/" component={Work} />
+            <Route exact path="/work" component={Work} />
           </Switch>
         </BrowserRouter>
         <GlobalStyle />
