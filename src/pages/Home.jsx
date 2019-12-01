@@ -54,6 +54,7 @@ const ProfilePictureHolder = styled.div`
 const PhotoCard = styled(Card)`
   height: 250px;
   width: 250px;
+  background-size: 100% 100%;
   margin-bottom: 20px;
   background-image: url(${(props) => props.image});
   background-repeat: no-repeat;
