@@ -12,7 +12,7 @@ const defaultProps = {
 };
 
 const Container = styled.div`
-  margin-top: 50px;
+  margin-top: 75px;
   display: grid;
   grid-template-columns: 60% 40%;
 `;

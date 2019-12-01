@@ -7,6 +7,7 @@ import Card from '../components/Card';
 import Button from '../components/buttons/Button';
 import ExperienceContainer from '../components/experience/ExperienceContainer';
 import ExperienceItem from '../components/experience/ExperienceItem';
+import SkillsContainer from '../components/SkillsContainer';
 import Photo from '../images/rik.jpeg';
 
 const OuterContainer = styled.div`
@@ -58,6 +59,10 @@ const PhotoCard = styled(Card)`
   background-repeat: no-repeat;
 `;
 
+const ColorSpan = styled.span`
+  color: ${(props) => props.theme.maincolor}; 
+`;
+
 function Home(props) {
   return (
     <OuterContainer>
@@ -71,8 +76,14 @@ function Home(props) {
             <p>
                 Rik found out he loved programming when his physics teacher showed him
                 a game he build in Pascal. After he finished his Computer Science study he
-                co-founded his company Code R together with his buddy from school. Later
-                they also founded Invyte, a ticket management mobile app.
+                co-founded his company
+              {' '}
+              <ColorSpan>Code R</ColorSpan>
+              {' '}
+              together with his buddy from school. Later they also started
+              {' '}
+              <ColorSpan>Invyte</ColorSpan>
+              , a ticket management mobile app.
             </p>
             <p>
               He is also interested in cyber security and loves to spend his spare time
@@ -85,6 +96,7 @@ function Home(props) {
             <Button icon={faEnvelope}>Contact</Button>
           </ProfilePictureHolder>
         </DescriptionHolder>
+        <SkillsContainer />
         <ExperienceContainer>
           <ExperienceItem icon={faDesktop} company="Code R" date="August 2017 - present">Full-stack Developer & Code-founder</ExperienceItem>
           <ExperienceItem icon={faDesktop} company="Invyte" date="Februari 2017 - present">Full-stack Developer & Code-founder</ExperienceItem>
