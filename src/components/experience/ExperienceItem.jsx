@@ -52,10 +52,10 @@ const Line = styled.div`
 `;
 
 const IconHolder = styled(FontAwesomeIcon)`
-  width: 40px;
   color: ${(props) => props.theme.iconcolor};
-  margin-top: 20px;
-  margin-left: 20px;
+  display: block;
+  margin: auto;
+  padding-top: 20px;
 `;
 
 const TextHolder = styled.div`
@@ -88,7 +88,6 @@ const SubSubTitle = styled.span`
   float: left;
   grid-row: 3;
   z-index: 2;
-  
 `;
 
 function ExperienceItem(props) {

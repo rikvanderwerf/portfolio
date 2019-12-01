@@ -17,6 +17,16 @@ const Container = styled.div`
   grid-template-columns: 60% 40%;
 `;
 
+const ContainerTitle = styled.div`
+  width: 100%;
+  text-align: center;
+  font-size: 26px;
+  font-family: Vollkorn;
+  grid-column: 1/3
+  margin-bottom: 50px;
+  color: ${(props) => props.theme.titlecolor}
+`;
+
 const ImageHolder = styled.img`
   width: 100%;
   height: 700px;
@@ -33,6 +43,7 @@ function ExperienceContainer(props) {
   const { children } = props;
   return (
     <Container>
+      <ContainerTitle>Experience</ContainerTitle>
       <ImageHolder src={ExperienceImage} />
       <ExperienceListContainer>
         {children}

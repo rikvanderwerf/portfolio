@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { faEnvelope, faDesktop } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faDesktop, faUserGraduate } from '@fortawesome/free-solid-svg-icons';
 import SearchBar from '../components/SearchBar';
 import OutlinedButton from '../components/buttons/OutlinedButton';
 import Card from '../components/Card';
@@ -46,7 +46,7 @@ const Title = styled.p`
 `;
 
 const ProfilePictureHolder = styled.div`
-  padding: 20px;
+  padding: 20px; 
   grid-column: 3;
 `;
 
@@ -88,7 +88,7 @@ function Home(props) {
         <ExperienceContainer>
           <ExperienceItem icon={faDesktop} company="Code R" date="August 2017 - present">Full-stack Developer & Code-founder</ExperienceItem>
           <ExperienceItem icon={faDesktop} company="Invyte" date="Februari 2017 - present">Full-stack Developer & Code-founder</ExperienceItem>
-          <ExperienceItem icon={faDesktop} company="ICT Group" date="Februari 2017 - June 2017">Gradution Intern</ExperienceItem>
+          <ExperienceItem icon={faUserGraduate} company="ICT Group" date="Februari 2017 - June 2017">Gradution Intern</ExperienceItem>
           <ExperienceItem line={false} icon={faDesktop} company="Label A" date="September 2015 - May 2016">Back-end developer</ExperienceItem>
         </ExperienceContainer>
       </Content>
