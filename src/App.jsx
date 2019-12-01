@@ -8,7 +8,9 @@ const theme = {
   backgroundcolor: '#F3F5F9',
   maincolor: '#6C59FF',
   maindarkcolor: '#513AFC',
+  subtextcolor: '#939390',
   titlecolor: '#4A4A4A',
+  iconcolor: '#fff',
   textcolor: '#70706F',
   maincolorshadow: 'rgb(108, 89, 255, 0.2)',
 };

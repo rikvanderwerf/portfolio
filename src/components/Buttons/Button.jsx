@@ -1,12 +1,12 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import styled from 'styled-components';
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Card from '../Card';
 
 const propTypes = {
   children: PropTypes.node,
-  icon: PropTypes.node.isRequired,
+  icon: PropTypes.object.isRequired,
 };
 
 const defaultProps = {
@@ -17,13 +17,14 @@ const ButtonHolder = styled(Card)`
   height: 50px;
   width: 250px;
   background-color: ${(props) => props.theme.maincolor};
+  box-shadow: 1px 1px 15px 5px  ${(props) => props.theme.maincolorshadow};
   position: relative;
 `;
 
 const TextHolder = styled.div`
   color: #4A4A4A;
   margin-left: 20px;
-  color: white;
+  color: ${(props) => props.theme.iconcolor};;
   width: 80%;
   text-align: center;
   float: left;
@@ -49,7 +50,7 @@ const IconHolder = styled.div`
 `;
 
 const Icon = styled(FontAwesomeIcon)`
-  color: white;
+  color: ${(props) => props.theme.iconcolor};;
   height: 100%;
 `;
 

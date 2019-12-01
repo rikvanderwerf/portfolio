@@ -38,7 +38,7 @@ const IconCard = styled(Card)`
   right: 0;
   postion: relative;
   background-color: ${(props) => props.theme.maincolor};
-  box-shadow: 0 10px 15px -3px ${(props) => props.theme.maincolorshadow};
+  box-shadow: 1px 1px 15px 5px  ${(props) => props.theme.maincolorshadow};
 `;
 
 const IconHolder = styled.div`
@@ -47,7 +47,7 @@ const IconHolder = styled.div`
 `;
 
 const Icon = styled(FontAwesomeIcon)`
-  color: white;
+  color: ${(props) => props.theme.iconcolor};;
   height: 100%;
 `;
 

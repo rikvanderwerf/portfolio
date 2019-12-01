@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faDesktop } from '@fortawesome/free-solid-svg-icons';
 import SearchBar from '../components/SearchBar';
-import OutlinedButton from '../components/Buttons/OutlinedButton';
+import OutlinedButton from '../components/buttons/OutlinedButton';
 import Card from '../components/Card';
-import Button from '../components/Buttons/Button';
-
+import Button from '../components/buttons/Button';
+import ExperienceContainer from '../components/experience/ExperienceContainer';
+import ExperienceItem from '../components/experience/ExperienceItem';
+import Photo from '../images/rik.jpeg';
 
 const OuterContainer = styled.div`
   max-width: 1350px;
@@ -40,6 +42,7 @@ const Title = styled.p`
   font-family: Vollkorn;
   font-weight: 600;
   font-size: 20px;
+  color: ${(props) => props.theme.titlecolor};
 `;
 
 const ProfilePictureHolder = styled.div`
@@ -51,6 +54,8 @@ const PhotoCard = styled(Card)`
   height: 250px;
   width: 250px;
   margin-bottom: 20px;
+  background-image: url(${(props) => props.image});
+  background-repeat: no-repeat;
 `;
 
 function Home(props) {
@@ -76,10 +81,16 @@ function Home(props) {
             <OutlinedButton>See his work</OutlinedButton>
           </DescriptionBox>
           <ProfilePictureHolder>
-            <PhotoCard />
+            <PhotoCard image={Photo} />
             <Button icon={faEnvelope}>Contact</Button>
           </ProfilePictureHolder>
         </DescriptionHolder>
+        <ExperienceContainer>
+          <ExperienceItem icon={faDesktop} company="Code R" date="August 2017 - present">Full-stack Developer & Code-founder</ExperienceItem>
+          <ExperienceItem icon={faDesktop} company="Invyte" date="Februari 2017 - present">Full-stack Developer & Code-founder</ExperienceItem>
+          <ExperienceItem icon={faDesktop} company="ICT Group" date="Februari 2017 - June 2017">Gradution Intern</ExperienceItem>
+          <ExperienceItem line={false} icon={faDesktop} company="Label A" date="September 2015 - May 2016">Back-end developer</ExperienceItem>
+        </ExperienceContainer>
       </Content>
     </OuterContainer>
   );
