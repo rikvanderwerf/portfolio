@@ -3,7 +3,9 @@ import styled from 'styled-components';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Card from '../components/Card';
+import DeliverablesAndLanguages from '../components/work/DeliverablesAndLanguages';
 import InvyteShowcase from '../images/showcase/invyte-app-showcase.png';
+import ProjectDescription from '../components/work/ProjectDescription';
 
 const TopBar = styled.div`
   width: 100%;
@@ -27,7 +29,7 @@ const Background = styled.div`
   width: 50%;
   position: absolute;
   z-index: 1;
-  height: 1000px;
+  height: 1500px;
   background-color: ${(props) => props.theme.backgroundsecondarycolor}
 `;
 
@@ -51,6 +53,7 @@ const TopImageCard = styled(Card)`
 `;
 
 function Work(props) {
+  const { theme } = props;
   return (
     <div>
       <TopBar>
@@ -60,6 +63,15 @@ function Work(props) {
       <Background />
       <OuterContainer>
         <TopImageCard image={InvyteShowcase} />
+        <DeliverablesAndLanguages
+          deliverables={['iOS application', 'Android application', 'Back-end API']}
+          languages={['Swift', 'Kotlin', 'Python']}
+        />
+        <ProjectDescription
+          title="Invyte"
+          subtitle="A easy, stress-free way to share and manage event tickets"
+          projectrole="Fullstack development & design"
+        />
       </OuterContainer>
     </div>
   );

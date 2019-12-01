@@ -15,6 +15,9 @@ const theme = {
   textcolor: '#70706F',
   maincolorshadow: 'rgb(108, 89, 255, 0.2)',
   backgroundsecondarycolor: '#3F3D56',
+  invertedtitlecolor: '#969696',
+  invertedtextcolor: '#EEEEEE',
+  invytecolor: '01C6AA',
 };
 
 const GlobalStyle = createGlobalStyle`

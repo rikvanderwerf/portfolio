@@ -100,8 +100,8 @@ function Home(props) {
         </DescriptionHolder>
         <SkillsContainer />
         <ExperienceContainer>
-          <ExperienceItem icon={faDesktop} company="Code R" date="August 2017 - present">Full-stack Developer & Code-founder</ExperienceItem>
-          <ExperienceItem icon={faDesktop} company="Invyte" date="Februari 2017 - present">Full-stack Developer & Code-founder</ExperienceItem>
+          <ExperienceItem icon={faDesktop} company="Code R" date="August 2017 - present">Full-stack Developer & Co-founder</ExperienceItem>
+          <ExperienceItem icon={faDesktop} company="Invyte" date="Februari 2017 - present">Full-stack Developer & Co-founder</ExperienceItem>
           <ExperienceItem icon={faUserGraduate} company="ICT Group" date="Februari 2017 - June 2017">Gradution Intern</ExperienceItem>
           <ExperienceItem line={false} icon={faDesktop} company="Label A" date="September 2015 - May 2016">Back-end developer</ExperienceItem>
         </ExperienceContainer>
