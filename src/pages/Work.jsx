@@ -6,6 +6,10 @@ import Card from '../components/Card';
 import DeliverablesAndLanguages from '../components/work/DeliverablesAndLanguages';
 import InvyteShowcase from '../images/showcase/invyte-app-showcase.png';
 import ProjectDescription from '../components/work/ProjectDescription';
+import WorkDetailContainer from '../components/work/WorkDetailContainer';
+import MobileApplications from '../images/mobileApplications.svg';
+import sourceCode from '../images/sourceCode.svg';
+import serverStatus from '../images/serverStatus.svg';
 
 const TopBar = styled.div`
   width: 100%;
@@ -52,8 +56,11 @@ const TopImageCard = styled(Card)`
   background-repeat: no-repeat;
 `;
 
+const ColorSpan = styled.span`
+  color: ${(props) => props.theme.maincolor}; 
+`;
+
 function Work(props) {
-  const { theme } = props;
   return (
     <div>
       <TopBar>
@@ -72,6 +79,29 @@ function Work(props) {
           subtitle="A easy, stress-free way to share and manage event tickets"
           projectrole="Fullstack development & design"
         />
+        <WorkDetailContainer imageRight={false} image={MobileApplications} title="Mobile applications">
+          I have worked on designing and creating both the
+          <ColorSpan> Android</ColorSpan>
+          {' '}
+          and the
+          {' '}
+          <ColorSpan>iOS </ColorSpan>
+          Because Invyte doesn&apos;t have a web application, these mobile apps were our main focus.
+        </WorkDetailContainer>
+        <WorkDetailContainer imageRight image={sourceCode} title="Back-end">
+          I helped creating the backend, a
+
+          <ColorSpan> RESTfull API</ColorSpan>
+          {' '}
+          with Python. The backend includes some some complex functionalities such as reading data from pdf tickets.
+        </WorkDetailContainer>
+        <WorkDetailContainer imageRight={false} image={serverStatus} title="Infrastructure">
+          The whole infrastructre runs on Google Cloud Platform and is setup with
+          {' '}
+          <ColorSpan>Docker</ColorSpan>
+          and
+          <ColorSpan> Kubernetes</ColorSpan>
+        </WorkDetailContainer>
       </OuterContainer>
     </div>
   );

@@ -6,7 +6,7 @@ import Card from '../Card';
 
 const propTypes = {
   children: PropTypes.node,
-  icon: PropTypes.object.isRequired,
+  icon: PropTypes.objectOf(PropTypes.object).isRequired,
 };
 
 const defaultProps = {

@@ -15,6 +15,10 @@ const Description = styled.div`
   grid-colomn: 1;
 `;
 
+const StyledSplitContainer = styled(SplitContainer)`
+  margin-bottom: 250px;
+`;
+
 const Title = styled.div`
   font-family: Vollkorn;
   font-weight: 600;
@@ -53,7 +57,7 @@ const ButtonWrapper = styled.div`
 function ProjectDescription(props) {
   const { title, subtitle, projectrole } = props;
   return (
-    <SplitContainer>
+    <StyledSplitContainer>
       <Description>
         <Title>{title}</Title>
         <SubTitle>{subtitle}</SubTitle>
@@ -65,8 +69,10 @@ function ProjectDescription(props) {
           <Button icon={faChevronRight}>Visit Invyte</Button>
         </ButtonWrapper>
       </ButtonContainer>
-    </SplitContainer>
+    </StyledSplitContainer>
   );
 }
+
+ProjectDescription.propTypes = propTypes;
 
 export default ProjectDescription;

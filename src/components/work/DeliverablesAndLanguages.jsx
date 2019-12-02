@@ -1,13 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import Card from '../Card';
 
 const propTypes = {
-  deliverables: PropTypes.array,
-  languages: PropTypes.array,
+  deliverables: PropTypes.objectOf(PropTypes.array).isRequired,
+  languages: PropTypes.objectOf(PropTypes.array).isRequired,
 };
 
 
