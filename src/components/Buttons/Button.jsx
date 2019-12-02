@@ -49,14 +49,12 @@ const IconCard = styled(Card)`
   background-color: ${(props) => props.theme.maindarkcolor};
 `;
 
-const IconHolder = styled.div`
-  margin: 0 auto;
-  width: 20px;
-`;
-
 const Icon = styled(FontAwesomeIcon)`
-  color: ${(props) => props.theme.iconcolor};;
+  color: ${(props) => props.theme.iconcolor};
   height: 100%;
+  width: 100%;
+  display: block;
+  margin: auto;
 `;
 
 function Button(props) {
@@ -64,7 +62,9 @@ function Button(props) {
   return (
     <ButtonHolder>
       <TextHolder>{children}</TextHolder>
-      <IconCard><IconHolder><Icon icon={icon} /></IconHolder></IconCard>
+      <IconCard>
+        <Icon icon={icon} />
+      </IconCard>
     </ButtonHolder>
   );
 }

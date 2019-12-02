@@ -29,7 +29,7 @@ const Background = styled.div`
   width: 50%;
   position: absolute;
   z-index: 1;
-  height: 1500px;
+  height: 1400px;
   background-color: ${(props) => props.theme.backgroundsecondarycolor}
 `;
 
