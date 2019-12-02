@@ -36,7 +36,7 @@ const Title = styled.li`
 
 const List = styled.ul`
   list-style-type: none;
-  width: 150px;
+  width: 175px;
   display: block;
   margin: 0 auto;
   padding-inline-start: 0px;

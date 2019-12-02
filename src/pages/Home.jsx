@@ -95,7 +95,7 @@ function Home(props) {
           </DescriptionBox>
           <ProfilePictureHolder>
             <PhotoCard image={Photo} />
-            <Button icon={faEnvelope}>Contact</Button>
+            <Button icon={faEnvelope} href="mailto:hendrik.werf@gmail.com?Subject=Hello">Contact</Button>
           </ProfilePictureHolder>
         </DescriptionHolder>
         <SkillsContainer />

@@ -10,6 +10,7 @@ import WorkDetailContainer from '../components/work/WorkDetailContainer';
 import MobileApplications from '../images/mobileApplications.svg';
 import sourceCode from '../images/sourceCode.svg';
 import serverStatus from '../images/serverStatus.svg';
+import Link from '../components/Link';
 
 const TopBar = styled.div`
   width: 100%;
@@ -60,19 +61,25 @@ const ColorSpan = styled.span`
   color: ${(props) => props.theme.maincolor}; 
 `;
 
+const StyledLink = styled(Link)`
+  color: ${(props) => props.theme.maincolor}; 
+`;
+
 function Work(props) {
   return (
     <div>
       <TopBar>
         <Helper />
-        <BackArrow><FontAwesomeIcon icon={faArrowLeft} /></BackArrow>
+        <StyledLink href="/">
+          <BackArrow><FontAwesomeIcon icon={faArrowLeft} /></BackArrow>
+        </StyledLink>
       </TopBar>
       <Background />
       <OuterContainer>
         <TopImageCard image={InvyteShowcase} />
         <DeliverablesAndLanguages
-          deliverables={['iOS application', 'Android application', 'Back-end API']}
-          languages={['Swift', 'Kotlin', 'Python']}
+          deliverables={['iOS application', 'Android application', 'Back-end API', 'Website']}
+          languages={['Swift', 'Kotlin', 'Python', 'Javascript (React)']}
         />
         <ProjectDescription
           title="Invyte"
@@ -81,24 +88,19 @@ function Work(props) {
         />
         <WorkDetailContainer imageRight={false} image={MobileApplications} title="Mobile applications">
           I have worked on designing and creating both the
-          <ColorSpan> Android</ColorSpan>
-          {' '}
+          <ColorSpan> Android </ColorSpan>
           and the
-          {' '}
-          <ColorSpan>iOS </ColorSpan>
+          <ColorSpan> iOS </ColorSpan>
           Because Invyte doesn&apos;t have a web application, these mobile apps were our main focus.
         </WorkDetailContainer>
         <WorkDetailContainer imageRight image={sourceCode} title="Back-end">
           I helped creating the backend, a
-
-          <ColorSpan> RESTfull API</ColorSpan>
-          {' '}
+          <ColorSpan> RESTfull API </ColorSpan>
           with Python. The backend includes some some complex functionalities such as reading data from pdf tickets.
         </WorkDetailContainer>
         <WorkDetailContainer imageRight={false} image={serverStatus} title="Infrastructure">
           The whole infrastructre runs on Google Cloud Platform and is setup with
-          {' '}
-          <ColorSpan>Docker</ColorSpan>
+          <ColorSpan> Docker </ColorSpan>
           and
           <ColorSpan> Kubernetes</ColorSpan>
         </WorkDetailContainer>

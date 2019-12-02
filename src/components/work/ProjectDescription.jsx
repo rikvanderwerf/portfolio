@@ -66,7 +66,7 @@ function ProjectDescription(props) {
       </Description>
       <ButtonContainer>
         <ButtonWrapper>
-          <Button icon={faChevronRight}>Visit Invyte</Button>
+          <Button href="https://invyte.app" icon={faChevronRight}>Visit Invyte</Button>
         </ButtonWrapper>
       </ButtonContainer>
     </StyledSplitContainer>

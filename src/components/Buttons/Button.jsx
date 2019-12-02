@@ -3,10 +3,12 @@ import styled from 'styled-components';
 import React from 'react';
 import PropTypes from 'prop-types';
 import Card from '../Card';
+import Link from "../Link";
 
 const propTypes = {
   children: PropTypes.node,
   icon: PropTypes.objectOf(PropTypes.object).isRequired,
+  href: PropTypes.string.isRequired,
 };
 
 const defaultProps = {
@@ -58,13 +60,15 @@ const Icon = styled(FontAwesomeIcon)`
 `;
 
 function Button(props) {
-  const { children, icon } = props;
+  const { children, icon, href } = props;
   return (
     <ButtonHolder>
-      <TextHolder>{children}</TextHolder>
-      <IconCard>
-        <Icon icon={icon} />
-      </IconCard>
+      <Link href={href}>
+        <TextHolder>{children}</TextHolder>
+        <IconCard>
+          <Icon icon={icon} />
+        </IconCard>
+      </Link>
     </ButtonHolder>
   );
 }
