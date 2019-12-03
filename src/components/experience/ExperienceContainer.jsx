@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import media from '../../util/media';
 import ExperienceImage from '../../Images/experience.svg';
 
 const propTypes = {
@@ -15,6 +16,10 @@ const Container = styled.div`
   margin-top: 75px;
   display: grid;
   grid-template-columns: 60% 40%;
+
+  ${media.phone`
+    display: inline;
+  `}
 `;
 
 const ContainerTitle = styled.div`
@@ -31,6 +36,10 @@ const ImageHolder = styled.img`
   width: 100%;
   height: 700px;
   grid-column: 1;
+
+  ${media.phone`
+    display: none;
+  `}
 `;
 
 const ExperienceListContainer = styled.div`

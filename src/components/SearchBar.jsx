@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import Card from './Card';
+import media from '../util/media';
 
 const propTypes = {
   children: PropTypes.node,
@@ -18,6 +19,11 @@ const SearchBarHolder = styled(Card)`
   height: 70px;
   margin: 0 auto;
   position: relative;
+
+  ${media.phone`
+    width: 90%;
+    height: 50px;
+  `}
 `;
 
 const TextHolder = styled.div`
@@ -28,6 +34,12 @@ const TextHolder = styled.div`
   font-size: 30px;
   line-height: 70px;
   vertical-align: middle;
+
+  ${media.phone`
+    font-size: 20px; 
+    width: 70%;
+    line-height: 50px;
+  `}
 `;
 
 const IconCard = styled(Card)`
@@ -39,6 +51,12 @@ const IconCard = styled(Card)`
   postion: relative;
   background-color: ${(props) => props.theme.maincolor};
   box-shadow: 1px 1px 15px 5px  ${(props) => props.theme.maincolorshadow};
+
+  ${media.phone`
+  margin: 5px;
+  height: 40px;
+  width: 40px;
+`}
 `;
 
 const IconHolder = styled.div`

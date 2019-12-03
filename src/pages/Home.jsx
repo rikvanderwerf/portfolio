@@ -10,11 +10,16 @@ import ExperienceItem from '../components/experience/ExperienceItem';
 import SkillsContainer from '../components/SkillsContainer';
 import Photo from '../images/rik.jpeg';
 import Link from '../components/Link';
+import media from '../util/media';
 
 const OuterContainer = styled.div`
   max-width: 1350px;
   margin: 0 auto;
   width: 80%;
+
+  ${media.phone`
+    width: 100%;
+  `}
 `;
 
 const Content = styled.div`
@@ -22,6 +27,10 @@ const Content = styled.div`
   align-items: center;
   margin: 0 auto;
   padding: 100px 0px;
+
+  ${media.phone`
+    padding: 20px;
+  `}
 `;
 
 const Header = styled.div`
@@ -33,6 +42,10 @@ const DescriptionHolder = styled.div`
   margin-top: 50px;
   display: grid;
   grid-template-columns: 60% 10% 30%;
+
+  ${media.phone`
+    display: inline;
+  `} 
 `;
 
 const DescriptionBox = styled.div`
@@ -50,6 +63,7 @@ const Title = styled.p`
 const ProfilePictureHolder = styled.div`
   padding: 20px; 
   grid-column: 3;
+  width: 100%;
 `;
 
 const PhotoCard = styled(Card)`
@@ -59,7 +73,21 @@ const PhotoCard = styled(Card)`
   margin-bottom: 20px;
   background-image: url(${(props) => props.image});
   background-repeat: no-repeat;
+
+  ${media.phone`
+    margin: 0 auto;
+  `} 
 `;
+
+const ButtonHolder = styled.div`
+  ${media.phone`
+    width: 250px;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  `}
+`;
+
 
 const ColorSpan = styled.span`
   color: ${(props) => props.theme.maincolor}; 
@@ -95,16 +123,16 @@ function Home(props) {
           </DescriptionBox>
           <ProfilePictureHolder>
             <PhotoCard image={Photo} />
-            <Button icon={faEnvelope} href="mailto:hendrik.werf@gmail.com?Subject=Hello">Contact</Button>
+            <ButtonHolder><Button icon={faEnvelope} href="mailto:hendrik.werf@gmail.com?Subject=Hello">Contact</Button></ButtonHolder>
           </ProfilePictureHolder>
         </DescriptionHolder>
         <SkillsContainer />
-        <ExperienceContainer>
+        {/* <ExperienceContainer>
           <ExperienceItem icon={faDesktop} company="Code R" date="August 2017 - present">Full-stack Developer & Co-founder</ExperienceItem>
           <ExperienceItem icon={faDesktop} company="Invyte" date="Februari 2017 - present">Full-stack Developer & Co-founder</ExperienceItem>
           <ExperienceItem icon={faUserGraduate} company="ICT Group" date="Februari 2017 - June 2017">Gradution Intern</ExperienceItem>
           <ExperienceItem line={false} icon={faDesktop} company="Label A" date="September 2015 - May 2016">Back-end developer</ExperienceItem>
-        </ExperienceContainer>
+        </ExperienceContainer> */}
       </Content>
     </OuterContainer>
   );

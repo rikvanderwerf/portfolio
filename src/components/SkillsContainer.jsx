@@ -9,6 +9,7 @@ import ReactImage from '../images/skills/react.png';
 import Postgresql from '../images/skills/postgresql.png';
 import Gcp from '../images/skills/gcp.png';
 import Docker from '../images/skills/docker.png';
+import media from '../util/media';
 
 const Container = styled.div`
   margin-top: 75px;
@@ -42,17 +43,35 @@ const ImageItem = styled.li`
   white-space: nowrap;
   margin-bottom: 50px;
   height: 150px;
+
 `;
 
 const List = styled.ul`
   list-style-type: none;
+
+  ${media.tablet`
+    width: 100%;
+  `}
+
+  ${media.phone`
+    width: 80%;
+  `}
 `;
 
 const SecondRowList = styled.ul`
   list-style-type: none;
   width: 1090px;
   display: block; 
-  margin: auto;
+  margin: 0 auto;
+ 
+  ${media.phone`
+    width: 80%;
+    margin: 0;
+  `} 
+
+  ${media.tablet`
+   
+  `} 
 `;
 
 function SkillsContainer(props) {

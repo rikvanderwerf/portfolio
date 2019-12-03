@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import React from 'react';
 import PropTypes from 'prop-types';
 import Card from '../Card';
-import Link from "../Link";
+import Link from '../Link';
 
 const propTypes = {
   children: PropTypes.node,
