@@ -46,6 +46,10 @@ const ExperienceListContainer = styled.div`
   margin-top: 100px;
   margin-left: -30%;
   grid-column: 2;
+
+  ${media.phone`
+  margin-left: 0;
+`} 
 `;
 
 function ExperienceContainer(props) {

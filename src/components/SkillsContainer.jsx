@@ -68,10 +68,6 @@ const SecondRowList = styled.ul`
     width: 80%;
     margin: 0;
   `} 
-
-  ${media.tablet`
-   
-  `} 
 `;
 
 function SkillsContainer(props) {

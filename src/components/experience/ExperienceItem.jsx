@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import media from '../../util/media';
 
 const propTypes = {
   icon: PropTypes.object.isRequired,
@@ -18,6 +19,10 @@ const defaultProps = {
 const Container = styled.div`
   width: 400px;
   margin-bottom: 50px;
+
+  ${media.phone`
+    width: 100%;
+  `}
 `;
 
 const OuterCircle = styled.div`
@@ -30,6 +35,10 @@ const OuterCircle = styled.div`
   border-radius: 50%;
   box-shadow: 1px 1px 15px 5px  rgba(134, 173, 245, 0.1);
   position: relative;
+
+  ${media.phone`
+    display: none;
+  `}
 `;
 
 const InnerCircle = styled.div`
@@ -48,6 +57,10 @@ const Line = styled.div`
   margin-left: 40px;
   position: absolute;
   z-index: 1;
+
+  ${media.phone`
+    display: none;
+  `}
 `;
 
 const IconHolder = styled(FontAwesomeIcon)`
@@ -62,6 +75,10 @@ const TextHolder = styled.div`
   margin-left: 200px;
   width: 100%;
   template-grid-rows: auto auto auto;
+
+  ${media.phone`
+    margin-left: 0px;
+  `}
 `;
 
 const Title = styled.span`
@@ -95,7 +112,6 @@ function ExperienceItem(props) {
   } = props;
   return (
     <Container>
-
       <OuterCircle>
         <InnerCircle><IconHolder icon={icon} /></InnerCircle>
       </OuterCircle>
@@ -105,7 +121,6 @@ function ExperienceItem(props) {
         <SubTitle>{ company }</SubTitle>
         <SubSubTitle>{ date }</SubSubTitle>
       </TextHolder>
-
     </Container>
   );
 }
