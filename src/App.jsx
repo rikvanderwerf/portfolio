@@ -1,24 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import Home from './pages/Home';
 import Work from './pages/Work';
-
-const theme = {
-  cardbackground: '#fff',
-  backgroundcolor: '#F3F5F9',
-  maincolor: '#6C59FF',
-  maindarkcolor: '#513AFC',
-  subtextcolor: '#939390',
-  titlecolor: '#4A4A4A',
-  iconcolor: '#fff',
-  textcolor: '#70706F',
-  maincolorshadow: 'rgb(108, 89, 255, 0.2)',
-  backgroundsecondarycolor: '#3F3D56',
-  invertedtitlecolor: '#969696',
-  invertedtextcolor: '#EEEEEE',
-  invytecolor: '01C6AA',
-};
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,500,600,700,700i&display=swap');
@@ -47,7 +32,8 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 
-export default function App(props) {
+function App(props) {
+  const { theme } = props;
   return (
     <div>
       <ThemeProvider theme={theme}>
@@ -64,3 +50,7 @@ export default function App(props) {
     </div>
   );
 }
+
+export default connect(
+  ({ theme }) => ({ theme: theme.theme }),
+)(App);

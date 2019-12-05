@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import SplitContainer from '../SplitContainer';
 import Button from '../buttons/Button';
+import media from '../../util/media';
+
 
 const propTypes = {
   title: PropTypes.string.isRequired,
@@ -13,10 +15,19 @@ const propTypes = {
 
 const Description = styled.div`
   grid-colomn: 1;
+
+  ${media.phone`
+    margin-top: 100px;
+  `}
 `;
 
 const StyledSplitContainer = styled(SplitContainer)`
   margin-bottom: 250px;
+
+
+  ${media.phone`
+    display: inline;
+  `}
 `;
 
 const Title = styled.div`
@@ -29,6 +40,11 @@ const Title = styled.div`
 const SubTitle = styled.div`
   color: ${(props) => props.theme.invertedtextcolor}; 
   font-size: 26px;
+ 
+  ${media.phone`
+    color: ${(props) => props.theme.textcolor}; 
+  `}
+ 
 `;
 
 const RoleTitle = styled.div`
@@ -39,6 +55,10 @@ const RoleTitle = styled.div`
 
 const Role = styled.div`
   color: ${(props) => props.theme.invertedtextcolor}
+
+  ${media.phone`
+    color: ${(props) => props.theme.textcolor}; 
+  `}
 `;
 
 const ButtonContainer = styled.div`
@@ -52,6 +72,11 @@ const ButtonWrapper = styled.div`
   float: right;
   margin: auto;
   right: 0;
+
+  ${media.phone`
+    margin-top: 100px;
+    margin-bottom: 100px;
+  `}
 `;
 
 function ProjectDescription(props) {

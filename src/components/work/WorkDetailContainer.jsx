@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import SplitContainer from '../SplitContainer';
+import media from '../../util/media';
+
 
 const propTypes = {
   title: PropTypes.string.isRequired,
@@ -18,6 +20,10 @@ const defaultProps = {
 const WorkDetailContainerHolder = styled(SplitContainer)`
   height: 500px;
   margin-bottom: 150px;
+
+  ${media.phone`
+    display: inline;
+  `}
 `;
 
 const ImageHolder = styled.div`
@@ -25,11 +31,23 @@ const ImageHolder = styled.div`
   width: 100%;
   padding: 75px;
   height: 350px;
+  white-space: nowrap;
+  display: flex;
+  object-fit: contain;
+  margin-top: 75px;
+
+  ${media.tablet`
+    padding: 25px;
+  `}
+
+  ${media.phone`
+    display: none;
+  `}
 `;
 
 const Image = styled.img`
   width: 100%;
-  heigth: 100%;
+  object-fit: contain;
 `;
 
 const DescriptionContainer = styled.div`
@@ -38,8 +56,24 @@ const DescriptionContainer = styled.div`
   width: 100%;
   margin-top: 75px;
   padding: 75px;
-  padding-left: 125px;
-  padding-right: 125px;
+  padding-right: ${(props) => (props.imageRight ? '125px' : '75px')};
+  padding-left: ${(props) => (props.imageRight ? '75px' : '125px')};
+
+  ${media.tablet`
+    padding-right: ${(props) => (props.imageRight ? '75px' : '25px')};
+    padding-left: ${(props) => (props.imageRight ? '25px' : '75px')};
+  `}
+
+  ${media.phone`
+    padding-right: 25px;
+    padding-left: 25px;
+  `}
+`;
+
+const Helper = styled.div`
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
 `;
 
 const Title = styled.div`
@@ -60,12 +94,22 @@ function WorkDetailContainer(props) {
   } = props;
   return (
     <WorkDetailContainerHolder>
-      {imageRight ? null : <ImageHolder imageRight={imageRight}><Image src={image} /></ImageHolder>}
+      {imageRight ? null : (
+        <ImageHolder imageRight={imageRight}>
+
+          <Image src={image} />
+        </ImageHolder>
+      )}
       <DescriptionContainer imageRight={imageRight}>
         <Title>{title}</Title>
         <Description>{children}</Description>
       </DescriptionContainer>
-      {imageRight ? <ImageHolder imageRight={imageRight}><Image src={image} /></ImageHolder> : null}
+      {imageRight ? (
+        <ImageHolder imageRight={imageRight}>
+          <Helper />
+          <Image src={image} />
+        </ImageHolder>
+      ) : null}
     </WorkDetailContainerHolder>
   );
 }
