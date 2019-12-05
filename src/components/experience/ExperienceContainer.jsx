@@ -20,6 +20,11 @@ const Container = styled.div`
   ${media.phone`
     display: inline;
   `}
+
+
+  ${media.tablet`
+    display: inline;
+  `}
 `;
 
 const ContainerTitle = styled.div`
@@ -40,6 +45,10 @@ const ImageHolder = styled.img`
   ${media.phone`
     display: none;
   `}
+
+  ${media.tablet`
+    display: none;
+  `}
 `;
 
 const ExperienceListContainer = styled.div`
@@ -48,8 +57,14 @@ const ExperienceListContainer = styled.div`
   grid-column: 2;
 
   ${media.phone`
-  margin-left: 0;
+  display: block;
+  margin: 0 auto;
 `} 
+
+  ${media.tablet`
+    display: block;
+    margin: 0 auto;
+  `}
 `;
 
 function ExperienceContainer(props) {

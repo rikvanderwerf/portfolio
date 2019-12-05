@@ -39,35 +39,27 @@ const Helper = styled.div`
 `;
 
 const ImageItem = styled.li`
+  display: block;
   float: left;
-  white-space: nowrap;
   margin-bottom: 50px;
   height: 150px;
-
+  margin: 0 auto;
 `;
 
 const List = styled.ul`
   list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  
 
   ${media.tablet`
-    width: 100%;
+    width: 90%;
+    margin: auto;
   `}
 
   ${media.phone`
     width: 80%;
   `}
-`;
-
-const SecondRowList = styled.ul`
-  list-style-type: none;
-  width: 1090px;
-  display: block; 
-  margin: 0 auto;
- 
-  ${media.phone`
-    width: 80%;
-    margin: 0;
-  `} 
 `;
 
 function SkillsContainer(props) {
@@ -95,8 +87,6 @@ function SkillsContainer(props) {
           <Helper />
           <ImageHolder src={Swift} />
         </ImageItem>
-      </List>
-      <SecondRowList>
         <ImageItem>
           <Helper />
           <ImageHolder src={ReactImage} />
@@ -113,7 +103,7 @@ function SkillsContainer(props) {
           <Helper />
           <ImageHolder src={Docker} />
         </ImageItem>
-      </SecondRowList>
+      </List>
     </Container>
   );
 }

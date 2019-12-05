@@ -20,6 +20,10 @@ const OuterContainer = styled.div`
   ${media.phone`
     width: 100%;
   `}
+
+  ${media.tablet`
+    width: 100%;
+  `}
 `;
 
 const Content = styled.div`
@@ -29,6 +33,10 @@ const Content = styled.div`
   padding: 100px 0px;
 
   ${media.phone`
+    padding: 20px;
+  `}
+
+  ${media.tablet`
     padding: 20px;
   `}
 `;
@@ -46,6 +54,10 @@ const DescriptionHolder = styled.div`
   ${media.phone`
     display: inline;
   `} 
+
+  ${media.tablet`
+    grid-template-columns: 60% 40%;
+  `}
 `;
 
 const DescriptionBox = styled.div`
@@ -64,6 +76,10 @@ const ProfilePictureHolder = styled.div`
   padding: 20px; 
   grid-column: 3;
   width: 100%;
+
+  ${media.tablet`
+    grid-column: 2;
+  `}
 `;
 
 const PhotoCard = styled(Card)`

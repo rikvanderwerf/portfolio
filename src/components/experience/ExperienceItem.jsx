@@ -21,7 +21,16 @@ const Container = styled.div`
   margin-bottom: 50px;
 
   ${media.phone`
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  `}
+
+  ${media.tablet`
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 50px;
   `}
 `;
 
@@ -38,6 +47,10 @@ const OuterCircle = styled.div`
 
   ${media.phone`
     display: none;
+  `}
+
+  ${media.tablet`
+    margin-left: 50px;
   `}
 `;
 
@@ -60,6 +73,10 @@ const Line = styled.div`
 
   ${media.phone`
     display: none;
+  `}
+
+  ${media.tablet`
+    margin-left: 90px;
   `}
 `;
 
